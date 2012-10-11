@@ -31,11 +31,14 @@ int main(int argc, const char * argv[])
         //[items insertObject:@"Zero" atIndex:0];
         
         // For every item in the array as determined by sending count to the items array
-        for(int i=0; i < [items count]; i++) {
+        //for(int i=0; i < [items count]; i++) {
             // We get the ith object from the array and pass it as an argument to NSLog,
             // which implicitly sends the description message to that object
-            NSLog(@"%@", [items objectAtIndex:i]);
-        }
+            //NSLog(@"%@", [items objectAtIndex:i]);
+        //}
+
+        for (Possession *item in items)
+            NSLog(@"%@", item);
         
         // Possession *p = [[Possession alloc] init];        
         //[p setPossessionName:@"Red Sofa"];
